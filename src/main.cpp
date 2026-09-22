@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Hello, team-github!\n";
+    std::cout << "Team Github\n";
     return 0;
 }
