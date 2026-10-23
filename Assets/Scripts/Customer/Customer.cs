@@ -1,0 +1,53 @@
+using UnityEngine;
+
+public class Customer : MonoBehaviour
+{
+    [Header("Patience")]
+    [SerializeField] private float maxPatience = 30f;
+    private float currentPatience;
+    private bool isActive = true;
+
+    public CustomerData Data { get; private set; }
+    public float PatienceRemaining => currentPatience;
+    public float PatiencePercent => currentPatience / maxPatience;
+
+    private void Awake()
+    {
+        currentPatience = maxPatience;
+    }
+
+    // Called by the spawner right after the customer is created
+    public void Initialize(CustomerData data)
+    {
+        Data = data;
+        gameObject.name = data.customerName;
+
+        var sr = GetComponent<SpriteRenderer>();
+        if (sr != null && data.customerSprite != null)
+            sr.sprite = data.customerSprite;
+    }
+
+    private void Update()
+    {
+        if (!isActive) return;
+
+        currentPatience -= Time.deltaTime;
+
+        if (currentPatience <= 0f)
+        {
+            currentPatience = 0f;
+            isActive = false;
+            OnPatienceExpired();
+        }
+    }
+
+    private void OnPatienceExpired()
+    {
+        Debug.Log($"{Data.customerName} the {Data.animalType} ran out of patience!");
+    }
+
+    public void Deactivate()
+    {
+        isActive = false;
+    }
+}
