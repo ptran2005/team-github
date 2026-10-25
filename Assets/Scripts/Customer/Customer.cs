@@ -11,6 +11,10 @@ public class Customer : MonoBehaviour
     public float PatienceRemaining => currentPatience;
     public float PatiencePercent => currentPatience / maxPatience;
 
+    public event System.Action<Customer> Expired;
+    public event System.Action<Customer> Left;
+    private bool hasLeft;
+
     private void Awake()
     {
         currentPatience = maxPatience;
@@ -18,14 +22,10 @@ public class Customer : MonoBehaviour
 
     // Called by the spawner right after the customer is created
     public void Initialize(CustomerData data)
-    {
-        Data = data;
-        gameObject.name = data.customerName;
-
-        var sr = GetComponent<SpriteRenderer>();
-        if (sr != null && data.customerSprite != null)
-            sr.sprite = data.customerSprite;
-    }
+{
+    Data = data;
+    gameObject.name = data.customerName;
+}
 
     private void Update()
     {
@@ -44,6 +44,18 @@ public class Customer : MonoBehaviour
     private void OnPatienceExpired()
     {
         Debug.Log($"{Data.customerName} the {Data.animalType} ran out of patience!");
+        Expired?.Invoke(this);
+        Leave(); //change this once we have a mood/game over system
+    }
+
+    [ContextMenu("Leave")]
+    public void Leave()
+    {
+        if (hasLeft) return;
+        hasLeft = true;
+        isActive = false;
+        Left?.Invoke(this);
+        Destroy(gameObject);
     }
 
     public void Deactivate()
