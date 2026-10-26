@@ -104,7 +104,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13a7656e91274cf8adda8fb378db81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Customer
-  maxPatience: 10
+  maxPatience: 30
+  currentPatience: 0
+  walkSpeed: 4
+  faceWalkDirection: 0
+  <State>k__BackingField: 0
 --- !u!65 &4109041288187841710
 BoxCollider:
   m_ObjectHideFlags: 0
