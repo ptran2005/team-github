@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195e36f61d82c555b5bc6275c33a12f1, type: 3}
+  m_Name: Steak
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeData
+  food: {fileID: 11400000, guid: 50fdb7d854532254ca6d7a5538474622, type: 2}
+  rawModel: {fileID: 919132149155446097, guid: cc39dcab607656a4e853033f7d880cbb, type: 3}
+  cookedModel: {fileID: 919132149155446097, guid: 5cb679932d3664245aba57e70d0fb448, type: 3}
+  needsCooking: 1
+  cookTime: 6
+  burnTime: 14
+  price: 12
