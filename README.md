@@ -37,3 +37,46 @@ The main features of this project was a working game that allows users to run a 
 Directory structure- visual diagram of the folder structure (and what each folder contains)
 (Extra points): Diagram / video / visual explanation
 Example README
+---
+
+---
+## Directory Structure
+---
+```
+├── Assets
+│   ├── Audio                     # Sound effects and music
+│   ├── Data                      # Game Data
+│   │   ├── Customers
+│   │   ├── Foods
+│   │   └── Recipes
+│   ├── Images                    # 2D images and UI art
+│   ├── Materials                 # Materials for each 3D prop
+│   │   ├── Banana
+│   │   ├── Fridge
+│   │   ├── Grill
+│   │   ├── RawSteak
+│   │   ├── Register
+│   │   ├── ServiceBell
+│   │   └── Steak
+│   ├── Models                    # 3D models
+│   ├── Prefabs                   # Reusable game objects
+│   │   └── Testing_Prefabs 
+│   ├── Scenes                    # Game scenes
+│   │   └── Testing
+│   ├── ScriptableObjects         # Customer assets
+│   │   ├── Customers
+│   │   └── Testing_Customers
+│   ├── Scripts                   # Game logic (scripts in C#)
+│   │   ├── Cooking
+│   │   ├── Customer
+│   │   ├── Editor
+│   │   ├── Orders
+│   │   ├── Save
+│   │   ├── Stations
+│   │   └── UI
+│   ├── Settings                  # Unity project settings
+│   ├── Textures
+│   └── Videos
+├── Library
+```
+---
