@@ -1,18 +1,16 @@
 # Jungle Cafe
----
 
 Authors: Christina Castillo, Thais Shin, Ryusean Robinson, Phat Tran
 
 This is our restaurant management game project for CPSC 362-11.
 
 ## Table of Contents
----
 1) Project Description
 2) Tech Stack
 3) Features
 4) Directory structure
 5) Demo Videos
----
+
 ## Tech Stack
 ---
 The language used in this program is C#, the framework was clang tidy as a linter. There was a lot of dependencies due to working with unity, what follows is a list of unity dependencies and why they are there.
