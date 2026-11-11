@@ -1,9 +1,10 @@
 # Jungle Cafe
 ---
+
 Authors: Christina Castillo, Thais Shin, Ryusean Robinson, Phat Tran
----
+
 This is our restaurant management game project for CPSC 362-11.
----
+
 ## Table of Contents
 ---
 1) Project Description
