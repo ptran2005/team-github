@@ -1,0 +1,35 @@
+newmtl wood
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 1
+d 1
+illum 1
+map_Kd wood.png
+
+newmtl bamboo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 1
+d 1
+illum 1
+map_Kd bamboo.png
+
+newmtl canvas
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 1
+d 1
+illum 1
+map_Kd canvas.png
+
+newmtl earth
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 1
+d 1
+illum 1
+map_Kd earth.png
